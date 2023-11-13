@@ -1,0 +1,276 @@
+* {
+  box-sizing: border-box;
+  background-color: white;
+}
+
+:root {
+  --primary-color: gray;
+  --secondary-color: white;
+}
+
+body {
+  background-color: var(--primary-color);
+  margin: 0;
+}
+
+.filter h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin: 40px 0 60px 0;
+}
+
+.filter form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.filter .search-input,
+.year-input {
+  width: 60%;
+  max-width: 400px;
+  padding: 10px 20px;
+  border: none;
+  box-shadow: 0 0 6px gray;
+  border-radius: 5px;
+  font-size: 18px;
+  color: black;
+}
+
+.filter .filter-button,
+.filter .search-button,
+.filter-button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 18px;
+  box-shadow: 0 0 6px gray;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+yyy #main {
+  padding: 0 100px;
+}
+
+#movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  width: calc(20% - 30px);
+  margin: 15px;
+  border-radius: 3px;
+  box-shadow: 0.2px 4px 5px gray;
+  background-color: var(--secondary-color);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.movie .movie-info {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  letter-spacing: 0.5px;
+  height: 100%;
+}
+
+.movie .movie-info h3 {
+  margin-top: 0;
+  text-align: center;
+  white-space: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  color: #333;
+  max-height: 3em;
+  line-height: 1.5em;
+}
+
+.movie .movie-info span {
+  background-color: var(--secondary-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.green {
+  color: green;
+}
+
+.details-button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px auto;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.description {
+  padding: 1rem;
+  display: none;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#prev-button,
+#next-button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 18px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+#genres-label,
+#countries-label {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+.year-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.filter-button:hover {
+  background-color: darkgreen;
+}
+
+#pagination {
+  margin: 40px;
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pagination button {
+  padding: 10px 20px;
+  background-color: green;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+#pagination button:hover {
+  background-color: darkgreen;
+}
+
+#pagination button[disabled] {
+  background-color: gray;
+  cursor: not-allowed;
+}
+
+#genre-list.show,
+#countries-list.show {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  background: linear-gradient(#009000, #007600);
+  border-radius: 5px;
+  position: absolute;
+  z-index: 5;
+  right: 0;
+}
+
+#countries-list.show {
+  width: 900px;
+  left: 100px;
+}
+
+#genre-list > div,
+#countries-list > div {
+  width: 33%;
+  background: linear-gradient(#009000, #007600);
+  color: white;
+}
+
+#countries-list > div {
+  width: 10%;
+}
+
+.button-filter {
+  border: 1px solid #007600;
+  color: #ffffff;
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  outline: none;
+
+  background: linear-gradient(#009000, #007600);
+}
+.button-filter:hover {
+  -webkit-filter: brightness(120%);
+  filter: brightness(120%);
+}
+
+.button-filter:active {
+  background: linear-gradient(#007600, #009000);
+}
+
+fieldset {
+  border: none;
+  position: relative;
+}
